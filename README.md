@@ -1,0 +1,1 @@
+This is a scoring app for a game called "Baseball" which is played on a real dartboard.  This app provides an alternative to pen and paper scoring for up to 8 players across 9 "innings".  The rules for the game are included in the settings.
