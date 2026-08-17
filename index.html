@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Darts Baseball</title>
+<!-- Belt-and-suspenders: tell any cache along the way not to hang onto
+     THIS page either, so the redirect target below is picked fresh every
+     time. Browsers don't fully honor these meta tags for HTTP caching
+     decisions, but they cost nothing and can only help. -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<!-- No-JS fallback: still gets you to the game, just without the
+     cache-busting query string. -->
+<meta http-equiv="refresh" content="0; url=darts-baseball.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    background: #f0f0ee;
+    color: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+  }
+  .wrap { max-width: 320px; }
+  .emoji { font-size: 40px; margin-bottom: 12px; }
+  .label { font-size: 15px; color: #555; margin-bottom: 18px; }
+  a.manual-link {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1.5px solid #1a6edb;
+    color: #1a6edb;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="emoji">⚾</div>
+    <div class="label">Loading Darts Baseball…</div>
+    <!-- Shown immediately as a manual fallback; the script below normally
+         redirects before anyone has time to read or tap this. -->
+    <a class="manual-link" id="manual-link" href="darts-baseball.html">Tap here if it doesn't load</a>
+  </div>
+  <script>
+    // Redirect to the real game file with a cache-busting query string
+    // built fresh on every load, so the browser (and any CDN in front of
+    // GitHub Pages) always fetches the latest version rather than a
+    // remembered one. replace() (not href) so the loader doesn't sit in
+    // browser history — hitting Back goes to wherever you were before
+    // scanning the QR code, not back to this loading screen.
+    var target = 'darts-baseball.html?v=' + Date.now();
+    document.getElementById('manual-link').href = target;
+    window.location.replace(target);
+  </script>
+</body>
+</html>
